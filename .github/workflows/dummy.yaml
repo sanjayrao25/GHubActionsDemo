@@ -16,9 +16,9 @@ jobs:
         run: pip install --upgrade pip==21.2.3
       - name: Install Dependencies
         run: pip install -r requirements.txt
-      - name: Change Directory
-        run: cd tests
       - name: Run Tests
-        run: coverage run -m pytest --durations=5 -s -p no:warnings src
+        run: |
+          cd tests
+          coverage run -m pytest --durations=5 -s -p no:warnings src
       - name: Test Coverage Report
         run: coverage report -m
