@@ -18,3 +18,5 @@ jobs:
         run: pip install -r requirements.txt
       - name: Run Tests
         run: coverage run -m pytest --durations=5 -s -p no:warnings tests
+      - name: Test Coverage Report
+        run: coverage html && open htmlcov/index.html
