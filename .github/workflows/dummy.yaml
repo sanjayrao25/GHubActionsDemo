@@ -1,5 +1,8 @@
 name: Setup Custom Python Version
-on: [push]
+on:
+  push:
+    branches:
+      - 'main'
 jobs:
   install-python-version:
     runs-on: macos-latest
