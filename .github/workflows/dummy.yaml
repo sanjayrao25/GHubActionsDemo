@@ -4,7 +4,7 @@ jobs:
   install-python-version:
     runs-on: macos-latest
     steps:
-      - uses: actions/checkout@v4 
+      - uses: actions/checkout@v3 
       - name: Install Python
         uses: actions/setup-python@v4
         with:
