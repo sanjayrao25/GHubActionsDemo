@@ -5,8 +5,9 @@ jobs:
     runs-on: macos-latest
     steps:
       - name: Install Python
+        uses: actions/checkout@v3
         uses: actions/setup-python@v4
         with:
           python-version: "3.7.9"
       - name: Install Dependencies
-        run: echo  ${env.GITHUB_WORKSPACE}
+        run: echo  ${GITHUB_WORKSPACE}
