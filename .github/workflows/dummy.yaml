@@ -2,7 +2,7 @@ name: Setup Python Version
 on: [push]
 jobs:
   install-python-version:
-    runs-on: ubuntu-latest
+    runs-on: macos-latest
     steps:
       - name: Install Python
         uses: actions/setup-python@v4
