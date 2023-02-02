@@ -9,4 +9,4 @@ jobs:
         with:
           python-version: "3.7.9"
       - name: Install Dependencies
-        run: echo pwd
+        run: echo  ${env.GITHUB_WORKSPACE}
