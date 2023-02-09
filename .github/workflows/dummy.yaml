@@ -1,5 +1,12 @@
 name: Setup Custom Python Version
 on:
+  workflow_dispatch:
+    inputs:
+      name:
+        description: "Run Test"
+        required: True
+        default: True
+
   push:
     branches:
       - 'main'
