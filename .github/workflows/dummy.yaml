@@ -27,8 +27,6 @@ jobs:
         run: |
           cd tests
           coverage run -m pytest --durations=5 -s -p no:warnings src
-      - name: Test Coverage Report
-        run: coverage report -m
       - name: Run Codacy Analysis CLI
         uses: codacy/codacy-analysis-cli-action@master
         with:
