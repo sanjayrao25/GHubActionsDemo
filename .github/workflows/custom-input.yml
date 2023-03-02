@@ -1,0 +1,22 @@
+name: My Workflow
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  my_job:
+    runs-on: ubuntu-latest
+    inputs:
+      input1:
+        description: 'Description of Input 1'
+        required: true
+      input2:
+        description: 'Description of Input 2'
+        required: false
+    steps:
+      - name: Step 1
+        run: echo "Input 1 value is ${{ inputs.input1 }}"
+      - name: Step 2
+        run: echo "Input 2 value is ${{ inputs.input2 }}"
