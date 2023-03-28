@@ -1,0 +1,17 @@
+name: Blackduck Scan Build
+on:
+  create:
+    tags:
+      - ^([1-9]\d{3})\.(\d{2})\.(\d{1})-RELEASE$
+jobs:
+  build:
+    runs-on: ml-runner
+    steps:
+      - name: Checking out ${{ github.events.inputs.release-tag }}
+        uses: actions/checkout@v3
+        with:
+          ref: ${{ github.events.inputs.release-tag }}
+      - name: Install Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.7.9"
