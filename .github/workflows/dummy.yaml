@@ -10,6 +10,9 @@ on:
   push:
     branches:
       - 'main'
+concurrency:
+  group: my-workflow-group
+  max: 1
 jobs:
   install-python-version:
     runs-on: macos-latest
