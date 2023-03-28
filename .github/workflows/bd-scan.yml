@@ -2,7 +2,7 @@ name: Blackduck Scan Build
 on:
   create:
     tags:
-      - ^([1-9]\d{3})\.(\d{2})\.(\d{1})-RELEASE$
+      - '^([1-9]\d{3})\.(\d{2})\.(\d{1})-RELEASE$'
 jobs:
   build:
     runs-on: macos-latest
