@@ -5,7 +5,7 @@ on:
       - ^([1-9]\d{3})\.(\d{2})\.(\d{1})-RELEASE$
 jobs:
   build:
-    runs-on: ml-runner
+    runs-on: ubuntu-latest
     steps:
       - name: Checking out ${{ github.events.inputs.release-tag }}
         uses: actions/checkout@v3
