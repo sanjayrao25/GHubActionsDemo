@@ -14,3 +14,5 @@ jobs:
         run: echo "Input 1"
       - name: Step 2
         run: echo "Input 2"
+      - name: Step 3
+        run: echo "Input 3"
