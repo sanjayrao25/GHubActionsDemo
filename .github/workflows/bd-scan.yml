@@ -7,13 +7,11 @@ jobs:
   build:
     runs-on: macos-latest
     steps:
-      - if: ${{ github.ref == 'refs/tags/^([1-9]\d{3})\.(\d{2})\.(\d{1})-RELEASE$' }}
-        name: Checking out main
+      - name: Checking out main
         uses: actions/checkout@v3
         with:
           ref: main
-      - if: ${{ github.ref == 'refs/tags/^([1-9]\d{3})\.(\d{2})\.(\d{1})-RELEASE$' }}
-        name: Install Python
+      - name: Install Python
         uses: actions/setup-python@v4
         with:
           python-version: "3.7.9"
