@@ -2,11 +2,11 @@ name: Blackduck Scan Build
 on:
   push:
     tags:
-      - "v[0-9]+.[0-9]+.[0-9]+"
+      - "[0-9]+.[0-9]+.[0-9]+"
 jobs:
   build:
     runs-on: macos-latest
-    if: startsWith(github.ref, 'refs/tags/v')
+    if: startsWith(github.ref, 'refs/tags/*')
     steps:
       - name: Checking out main
         uses: actions/checkout@v3
