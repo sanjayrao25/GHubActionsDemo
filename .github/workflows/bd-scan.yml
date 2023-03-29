@@ -2,7 +2,7 @@ name: Blackduck Scan Build
 on:
   push:
     tags:
-      - '[1-9]*'
+      - '^[1-9].*$'
 jobs:
   build:
     runs-on: macos-latest
